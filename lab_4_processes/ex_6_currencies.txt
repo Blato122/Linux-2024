@@ -1,0 +1,1 @@
+grep -oP "(?<=<tr><td>).*?(?=</td></tr>)" nbp.html | cut -d "<" -f1,3,5 | tr ">" "<" | cut -d "<" -f1,3,5 | tr "<" "\t"

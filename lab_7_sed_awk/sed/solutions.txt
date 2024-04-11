@@ -1,0 +1,59 @@
+    Wyświetl plik /etc/passwd przy pomocy sed.
+    Zamień separator - dwukropek - w pliku /etc/passwd na spację.
+    Wyświetl tylko loginy użytkowników zapisanych w pliku /etc/passwd
+    Wyświetl 4, 7, 10 i 13 linię pliku /etc/passwd
+    Wyświetl określone przedziałem (np. od 3. do 5. włącznie) linie pliku /etc/passwd.
+    Wyświetl linie pliku /etc/passwd opisujące osoby mające login zaczynający się na 'z'.
+    Wyświetl linie pliku /etc/passwd opisujące osoby mające login zaczynający się na 'w' lub 'z'.
+    Jak przy pomocy sed zaimitować polecenie grep -v? np. dla frazy 'lo' (grep -v lo /etc/networks)
+    Jak zamienić w pliku wszystkie słowa root na twój login (przetestuj na pliku /etc/passwd)?
+    Jak zamienić słowo 'root' na twój login w pliku, ale tylko w wierszach, w których występuje 'www'? A jak tam gdzie nie występuje?
+    Jak usunąć z pliku puste linie?
+    Jak zamienić przy pomocy sed wszystkie litery 'r' na 'k'?
+    W jaki sposób zakodować szyfrem ROT13 plik przy pomocy sed (szyfr zamienia litery na występujące 13 liter dalej, np. a↔n, b↔o, itd.)?
+    Przy pomocy polecenia sed zakomentuj linijkę link-local w pliku /etc/networks.
+    W jaki sposób przy użyciu sed wstawić kolumnę X po pierwszym znaku wiersza (dodatkowy znak X w każdym wierszu)? A jak po piątym?
+    Jak przy pomocy sed powtórzyć 3 razy pierwsze dwie litery każdego wiersza w pliku?
+    Wylistuj wszystkie wiersze pliku /etc/mime.types zaczynające się od video i wyświetl ich numer.
+    Napisz polecenie sed imitujące polecenie cut -d: -f2.
+    Napisz polecenie sed imitujące cat -n.
+    Napisać skrypt programu sed który ustawi powłokę startową na /bin/tcsh dla wszystkich użytkowników posiadającym folder domowy /nonexistent (zmodyfikuje odpowiednio plik /etc/passwd). Skrypt ma wydrukować całą zawartość zmienionego pliku na ekranie wraz z zaznaczeniem zmienionych linii - tak jak jest to przedstawione poniżej:
+
+    ----------------------------
+    linia w której nastąpiła zmiana powłoki
+    ----------------------------
+
+    Napisać skrypt programu sed wyświetlający linię zawarte w pliku /etc/passwd w odwrotnej kolejności.
+
+
+1. sed -n -e 'p' /etc/passwd LUB
+2. sed -n -e 's/:/ /pg' /etc/passwd LUB sed -e 's/:/ /g' /etc/passwd
+3. sed -e 's/:.*//' /etc/passwd (zamienia wszystko po dwukropku na pusty string)
+4. sed -n -e '4p;7p;10p;13p' /etc/passwd
+5. sed -n -e '3,5p' /etc/passwd
+6. sed -n -e '/^w/p' /etc/passwd
+7. sed -n -e '/^a\|^w/p' /etc/passwd (użyłem a zamiast z, bo na z nic nie ma)
+	sed -n -e '/[^aw]/p' /etc/passwd (przetestować)
+
+8. sed -n -e '/lo/!p' /etc/networks
+9. sed -e "s/root/`whoami`/g" /etc/passwd ("" zamiast ''!)
+	sed -n -e "s/root/`whoami`/g; /^`whoami`/p" /etc/passwd
+10. sed -e "/www/s/root/`whoami`/g" /etc/passwd I sed -e "/www/!s/root/`whoami`/g" /etc/passwd 
+11. sed -e '/^[[:space:]]*$/d' sth
+12. sed -e 's/r/k/g' sth
+
+13. 
+14. 
+15. 
+16. 
+
+17. sed -n -e "/^video/{=;s/^/&: /;p}" /etc/mime.types | sed 'N;s/\n//' LUB sed -n -e "/^video/{=;p}" /etc/mime.types | sed 'N;s/\n/: /'
+	https://stackoverflow.com/a/10584999
+18. sed -nre 's/[^:]*:([^:]+).*/\1/p' /etc/passwd LUB sed -nre 's/([^:]+):([^:]+).*/\2/p' /etc/passwd
+	da się zcaptureować jakąś grupę wiele razy, ale bez powtarzania jej w komendzie?
+19. sed -ne '=;p' /etc/passwd | sed 'N;s/\n/ /'
+
+chat pytanie:
+sed -nre 's/([^:]+):([^:]+).*/\2/p' /etc/passwd - here, I had to write the capture group twice to be able to access the 2nd field. Is there a way I could specify the group just once and be able to access any of its fields (even if there are many?)
+
+chyba się nie da!
