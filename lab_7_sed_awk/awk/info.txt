@@ -1,0 +1,10 @@
+~ do porównywania do regexów
+RS nie jest włączany do żadnego rekordu
+iterowanie po tablicy:
+    #     for (i in parts) {
+    #         print parts[i] " " i
+    #     }
+match i substr:
+    # match($0, /<[^>]*>/);
+    # tag = substr($0, RSTART, RLENGTH);
+    # print "tag:", tag
