@@ -14,6 +14,8 @@ if [ "$#" -ne 2 ]; then
     exit
 fi
 
+# po co tu ten bash? chyba w samym awk z tym -v byłoby ok
+
 # turns out that [ is actually a program called test
 if [ "$opt" == "-a" ]; then
     # author
