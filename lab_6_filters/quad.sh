@@ -24,3 +24,5 @@ then
         	echo "($minusb - $s i) / $twoa"
 	fi
 fi
+
+# not finished yet
