@@ -12149,15 +12149,15 @@ knitting	 The activity of ******** something, or a thing that is being knitted
 knitwear	 Clothes made by connecting wool or another type of thread into joined rows
 knob	 A round handle, or a small round device for controlling a machine or electrical equipment
 knock	 To repeatedly hit something, producing a noise
-labyrinth - A complex maze-like structure, often used metaphorically to describe a confusing or intricate situation.
-lemur - A type of primate native to Madagascar, known for its distinctive large eyes and bushy tail.
-lymphocyte - A type of white blood cell that plays a key role in the body's immune system, responsible for identifying and destroying foreign invaders.
-microorganism - A tiny organism, such as a bacterium or virus, that can only be seen with a microscope.
-nebula - A cloud of gas and dust in outer space, often considered to be the birthplace of stars.
-oceanography - The scientific study of the oceans, including their physical and biological properties.
-paleontology - The study of prehistoric life through the examination of fossils.
-quantum - Relating to the smallest possible unit of a physical property, often used in the context of quantum physics.
-reptilian - Relating to or characteristic of reptiles, a class of cold-blooded vertebrates that includes snakes, lizards, and turtles.
+labyrinth  A complex maze-like structure, often used metaphorically to describe a confusing or intricate situation.
+lemur  A type of primate native to Madagascar, known for its distinctive large eyes and bushy tail.
+lymphocyte  A type of white blood cell that plays a key role in the body's immune system, responsible for identifying and destroying foreign invaders.
+microorganism  A tiny organism, such as a bacterium or virus, that can only be seen with a microscope.
+nebula  A cloud of gas and dust in outer space, often considered to be the birthplace of stars.
+oceanography  The scientific study of the oceans, including their physical and biological properties.
+paleontology  The study of prehistoric life through the examination of fossils.
+quantum  Relating to the smallest possible unit of a physical property, often used in the context of quantum physics.
+reptilian  Relating to or characteristic of reptiles, a class of cold-blooded vertebrates that includes snakes, lizards, and turtles.
 shoestring	 US for shoelace
 shoetree	 A piece of wood or metal shaped like the inside of a shoe, for putting inside a shoe to keep its shape when it is not being worn
 shone	 Past simple and past participle of shine
